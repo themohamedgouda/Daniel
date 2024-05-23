@@ -1,0 +1,554 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+:root{
+    --mainPadding:60px;
+    --mainBG:#f7f7f7;
+}
+html{
+    scroll-behavior: smooth;
+}
+body{
+    font-family: "Poppins", sans-serif;
+    scroll-behavior: smooth;
+
+}
+/* Start General components */
+h1, h2, h3, h4, h5, h6, .logo {
+    font-family: "Montserrat", sans-serif;
+}
+.dark-bg{
+    background-color: #5b5b5b;
+}
+ul{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+}
+.section-header
+{   padding-block:var(--mainPadding) ;
+    font-weight: bolder;
+    text-align: center;
+    color: #343434;
+    position: relative;
+    z-index: 100;
+}
+.section-header h3{
+    position: relative;
+    display: inline-block;
+}
+.section-header h3::before{
+    content: "";
+    position: absolute;
+    background-image: url(../images/dots.png);
+    background-position: left bottom;
+    width: 100%;
+    height: 20px;
+    left: 0;
+    bottom: 0;
+    z-index: -1;
+}
+.section-header h3::after{
+    content: "";
+    position: absolute;
+    background-color: #343434;
+    border-radius: 50%;
+    z-index: -1;
+    width: 8px;
+    height: 8px;
+    right: -12px;
+    bottom: 7px;
+}
+.fixed-icon{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: black;
+}
+.fixed-icon:hover{
+    background-color: white;
+    border: 1px solid black;
+}
+.fixed-icon:hover a{
+    color: black;
+}
+.fixed-icon a{
+    color: white;
+}
+.icon-center
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+/* End General components */
+/* Start Nav */
+nav a {
+    color: black !important ;
+    letter-spacing: 1px !important;
+}
+.nav-link {
+    position: relative;
+    text-decoration: none;
+    color: #ffffff; 
+    width: fit-content;
+}
+ .nav-item .nav-link.active::after{
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 3px;
+    bottom: 0;
+    left: 0;
+    background-color: black; /* Change underline color as needed */
+}
+
+/* End Nav */
+/* Start The Hero header Setion */
+header.header{
+    background-image: linear-gradient(to right , rgba(0, 0, 0, 0.7),rgba(0, 0, 0, 0.7)),url(../images/bg.jpg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    text-align: center;
+}
+header.header .header-caption h1{
+    font-size: 60px;
+    color: white;
+    font-weight: 900;
+    padding: 10px;
+}
+header.header .header-caption ul li {
+    background-color: rgba(0, 0, 0, 0.3);
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+}
+header.header .header-caption ul li a {
+    color: white;
+}
+header.header .header-caption h2::after{
+    content: " | ";
+    animation: typing 7s infinite ease;
+}
+@keyframes typing{
+    0%{
+      content:' De|';
+    }
+    5%{
+      content:' Devo|';
+    }
+    10%{
+      content:' Devolp|';
+    }
+    12% {
+      content: ' Devolper|';
+    }
+    15%{
+      content: ' Devolp|';
+  
+    }
+    20% {
+      content: ' Devo|';
+    }
+    25%{
+      content:' De|';
+    }
+    30%{
+      content:' |';
+    }
+    33%{
+      content:' De|';
+    }
+    36%{
+      content:' Desi|';
+    }
+    40%{
+      content:' Design|';
+    }
+    43% {
+      content: ' Designer|';
+    }
+    46%{
+      content: ' Design|';
+  
+    }
+    50% {
+      content: ' Desi|';
+    }
+    54%{
+      content:' De|';
+    }
+    57%{
+      content:' |';
+    }
+    60%{
+      content:' La|';
+    }
+    63% {
+      content: ' Larr|';
+    }
+    65%{
+      content: ' Larry|';
+  
+    }
+    70%{
+      content: ' Larry Da|';
+    }
+    75%{
+        content: ' Larry Dani|';
+    }
+    80%{
+        content: ' Larry Danie|';
+    }
+    83%{
+        content: ' Larry Daniels|';
+    }
+    85%{
+        content: ' Larry Dani|';
+    }
+    89%{
+        content: ' Larry D|';
+    }
+    91%{
+        content: ' Larry|';
+    }
+    93%{
+        content: ' Lar|';
+    }
+    96%{
+        content: ' L|';
+    }
+    98%{
+        content: ' |';
+    }
+    100%{
+        content: '|';
+    }
+  }
+/* End The Hero header Setion */
+ /* Start The About Setion  */
+section.about{
+    padding-block:var(--mainPadding);
+}
+section.about .about-image img{
+    width: 100%;
+}
+section.about .about-image{
+    position: relative;
+}section.about .about-image::after{
+    content: "";
+    position: absolute;
+    background-image: url(../images/dots.png);
+    width: 85%;
+    height: 90%;
+    left: -30px;
+    top: 80px;
+    z-index: -1;
+}
+
+section.about .title{
+    color:  #343434;
+}
+section.about .title h2{
+    position: relative;
+    display: inline-block;
+    color:  #343434;
+}
+section.about .title h2::before{
+    content: "";
+    position: absolute;
+    background-image: url(../images/dots.png);
+    background-position: left bottom;
+    width: 100%;
+    height: 20px;
+    left: 0;
+    bottom: 0;
+    z-index: -1;
+}
+section.about .title h2::after{
+    content: "";
+    position: absolute;
+    background-color: #343434;
+    border-radius: 50%;
+    z-index: -1;
+    width: 8px;
+    height: 8px;
+    right: -12px;
+    bottom: 7px;
+}
+.main-button{
+    background-color:#1c1c1c;
+}
+.main-button a{
+    color: white;
+}
+.main-button:hover{
+    color:#1c1c1c;
+    background-color: white;
+    border: 1px solid#1c1c1c;
+}
+.main-button:hover a{
+    color:#1c1c1c;
+}
+.secondary-button{
+    background-color: white;
+    border: 1px solid#1c1c1c;
+
+}
+.secondary-button a{
+    color:#1c1c1c;
+}
+.secondary-button:hover{
+    color:#1c1c1c;
+    background-color:#1c1c1c;
+}
+.secondary-button:hover a{
+    color: white;
+    
+}
+.progress, .progress-stacked{
+    --bs-progress-height:1.5rem
+}
+ /* End The About Setion */
+ /* Start The Services Setion */
+ section.services{
+    background-color: var(--mainBG);
+ }
+ .services{
+    background-color: #f5f5f5;
+    padding-bottom: var(--mainPadding);
+}
+.services .row .card .icon{
+    width: 80px;
+    height: 80px;
+    margin: auto;
+    background-color: #f4f4f4;
+    border-radius: 50%;
+}
+.services .row .card .icon:hover {
+    background-color:black;
+    width: 80px ;
+    height: 80px;
+    border-radius: 50%;;
+}
+.services .row .card .icon:hover  i{
+    color: white;
+}
+ /* End The Services Setion */
+ /* Start navs-taps Section */
+ section.Navs{
+    padding-bottom:calc( var(--mainPadding) * 1.5);
+    padding-top: calc(var(--mainPadding) * 0.5);
+ }
+ .content-tap{
+    position: relative;
+ }
+ .Navs .content-tap .layer{
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    background-color: white;
+    opacity: 0;
+    transition: all 1s ease;
+ }
+ .la-icon{
+    width: 40px;
+    height: 40px;
+    background-color: black;
+    text-align: center;
+    border-radius: 50%;
+    color: white;
+    cursor: pointer;
+ }
+ .la-icon:hover{
+    background-color: white;
+    color: black;
+    border: 1px solid black;
+ }
+ .content-tap .layer:hover{
+    opacity: 1;
+    transform: scale(0.97,0.97);
+ }
+ .nav-pills .nav-link.active, .nav-pills .show>.nav-link{
+    background-color: transparent;
+    color: black;
+ }
+ .nav-link:focus, .nav-link:hover{
+    color: black;
+ }
+.nav-pills .nav-link{
+    color: black;
+ }
+ /* End navs-taps Section */
+ /* Start The Carousel Setion */
+ section.slide{
+    padding-bottom: calc(var(--mainPadding)* 2);
+    padding-top: calc(var(--mainPadding) * 0.5);
+    background-color: var(--mainBG);
+
+ }
+ .carousel-indicators [data-bs-target] {
+    text-indent: 0;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: #d3c0c0;
+ }
+ .carousel-indicators{
+    bottom: -65px;
+ }
+  /* End The Carousel Setion */
+ /* Start The Stat Setion */
+ .stat-section
+{
+    padding-block: calc(var(--mainPadding));
+    color: black;
+}
+.stat-section .row  .icon{
+    width: 70px;
+    height: 70px;
+    margin: auto;
+    border-radius: 50%;
+}
+.stat-section .row  .icon i{
+    font-size: 30px;
+}
+ /* End The Stat Setion */
+ /* Start Team Setion */
+ section.team{
+    background-color: var(--mainBG);
+    padding-block: var(--mainPadding);
+ }
+ .pic-card{
+    position: relative;
+    overflow: hidden;
+   }
+   .pic-card .overlay{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background-color: white;
+    top: 0;
+    opacity: 0;
+    transform: scale(0.5,0.5);
+    transition: all 0.4s linear;
+    z-index: 1;
+   }
+   .main-card:hover .overlay{
+    opacity: 1;
+    transform:rotateY(180deg)  scale(0.98);
+   }
+   .main-card img:hover{
+    transform: scale(1.1,1.1);
+   }
+   .main-card img:hover .overlay{
+    opacity: 1;
+    transform:rotateY(180deg)  scale(0.98);
+   }
+   
+   .pic-card img{
+    transition: all 0.4s linear;
+   }
+   .social {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: auto;
+    position: absolute;
+    width: 100%;
+    top: 50%;
+    z-index: 555;
+    cursor: pointer;
+    color: white;
+    display: none;
+   }
+   .social i:hover {
+    color:black ;
+   }
+   .new-icon{
+    width: 50px;
+    height: 50px;
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+   }
+   .new-icon:hover{
+    background-color:white;
+    border: solid 1px black;
+   }
+   .main-card:hover .social{
+    display: flex;
+   }
+   .main-card img:hover .social{
+    display: flex;
+   }
+   .main-card img:hover .socialy{
+    display: flex;
+   }
+ /* End Team Setion */
+ /* Start Contact Setion */
+ section.contact{
+    padding-block:var(--mainPadding) ;
+ }
+ section.contact .icon{
+    width: 60px;
+    height: 60px;
+    background-color: #f4f4f4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    color: black;
+ }
+ section.contact .icon:hover{
+    background-color: black;
+    color: white;
+ }
+ 
+input[type="text"],
+input[type="email"]
+{
+     padding: 10px;
+     border-radius: 5px;
+     background: #f4f4f4; 
+     border: none;
+     outline: none;
+ }
+textarea {
+    border-radius: 5px;
+    background: #f4f4f4;
+    border: none;
+    outline: none;
+    padding: 10px;
+}
+.form-submit button {
+    padding: 10px 25px;
+    background-color: black;
+    color: #fff;
+    border: 1px solid transparent;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+.form-submit button:hover {
+    background-color: white;
+    color: black;
+    border-color: black;
+}
+ /* End Contact Setion */
+/* Start Footer */
+footer.footer
+{
+    padding-block: calc(var(--mainPadding) * 0.5);
+    background-color: #343434;
+    color: #748182;
+    text-align: center;
+}
+/* End Footer */
